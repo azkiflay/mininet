@@ -2,10 +2,6 @@
 Switches and routers play a critical role in enterprise networks. Traditionally, these network devices have been responsible for deciding which path packets should follow, as well the actual data trasnfer (forwarding). In other words, the control and data flow functionalities of the network devices have been dealt with at each swithch and router, individually. While *control* refers to determining step-by-step movement of a given packet from source to destination, *forwarding* means the flow of data packets from the source to the destination. In tradtional computer networks, switches and routers are responsible for both the control and data forwarding functions.
 
 <p align="center">
-  <img src="figures/traditional_switch.png" alt="Non-SDN Switches" width="200" height="200"/>
-</p>
-
-<p align="center">
   <img src="figures/traditional_switch.png"/>
 </p>
 <p align="center"><strong>Figure 1:</strong> Non-SDN Switches with control and data planes.</p>
