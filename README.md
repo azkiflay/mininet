@@ -4,7 +4,7 @@ Switches and routers play a critical role in enterprise networks. Traditionally,
 <p align="center">
   <img src="figures/traditional_switch.png" width="247" height="140"/>
 </p>
-<p align="center"><strong>Figure 1:</strong> Non-SDN Switches with control and data planes.</p>
+<p align="center"><strong>Figure 1:</strong> Traditional switches with control and data planes.</p>
 
 
 However, the merger of control and data forwarding planes has several limitations including:
