@@ -7,12 +7,15 @@ Switches and routers play a critical role in enterprise networks. Traditionally,
 <p align="center"><strong>Figure 1:</strong> Traditional switches with control and data planes.</p>
 
 
-Notably, the control plane is distributed across the network in traditional network architecture. However, the merger of control and data forwarding planes has been found to be inefficient. Therefore, to address the limitations of network architectures based on traditional switches, Software Defined Networking (SDN) was proposed nearly two decades ago.  SDN moves the control plane out of individual switches to create a centralized network control architecture. **Figure 2** shows the separation of control and data planes in SDN based architecture. Centralized control is handled by an **SDN Controller**, which is responsible for deciding which particular paths packets take in the network. Based on routing decisions made by the SDN controller, the actual data forwarding is made by individual switches by the data plane in each. In other words, all the control functionality in traditional switches has been moved to the SDN Controller. Notably, the data plane part is retained by individual switches in the network architecture. As a results, the switches in an SDN based network focus on data forwarding according to the instructions they receive from the SDN Controller.
+Notably, the control plane is distributed across the network in traditional network architecture. However, the merger of control and data forwarding planes has been found to be inefficient. Therefore, to address the limitations of network architectures based on traditional switches, Software Defined Networking (SDN) was proposed nearly two decades ago.  SDN moves the control plane out of individual switches to create a centralized network control architecture. **Figure 2** shows the separation of control and data planes in SDN based architecture. Centralized control is handled by an **SDN Controller**, which is responsible for deciding which particular paths packets take in the network. Based on routing decisions made by the SDN controller, the actual data forwarding is made by individual switches by the data plane in each.
 
 <p align="center">
   <img src="figures/sdn_switch.png" width="317.5" height="180"/>
 </p>
 <p align="center"><strong>Figure 2:</strong> SDN switches with centralized control plane.</p>
+
+In other words, all the control functionality in traditional switches has been moved to the SDN Controller. Notably, the data plane part is retained by individual switches in the network architecture. As a results, the switches in an SDN based network focus on data forwarding according to the instructions they receive from the SDN Controller.
+
 
 ## 
 
