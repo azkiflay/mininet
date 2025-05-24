@@ -30,28 +30,26 @@ Assuming the VirtualBox software is saved to **Downloads** directory in Ubuntu, 
   sudo apt install virtualbox-guest-additions-iso
   sudo apt install virtualbox-guest-utils-hwe
   ```
-These steps are shown in **Figures 3**. 
-
-<figure>
-<table>
-  <tr>
-    <td>
-      <img src="figures/mininet_import_appliance_1.png" width="317.5" height="180"/><br>
-    </td>
-    <td>
-      <img src="figures/mininet_import_appliance_2.png" width="317.5" height="180"/><br>
-    </td>
-  </tr>
-</table>
-<figcaption><strong>Figure 3: </strong> Mininet Installation in VirtualBox </figcaption>
-</figure>
-
 
 2. Download [Mininet VM image for Ubuntu 20.04.1](https://github.com/mininet/mininet/releases/download/2.3.0/mininet-2.3.0-210211-ubuntu-20.04.1-legacy-server-amd64-ovf.zip), which is the recommended one by the maintainers.
 If you prefer any of the earlier Mininet realeases for any reason, you can download it from [Older Mininet VM image for Ubuntu](https://github.com/mininet/mininet/releases/).
 
 3. Install Mininet in VirtualBox and setup remote access to Mininet according to the following steps.
- A. Import Mininet to VirtualBox (File --> Import Appliance)
+ A. Import Mininet to VirtualBox (File --> Import Appliance). These steps are shown in **Figures 3**. 
+
+<figure>
+<table>
+  <tr>
+    <td>
+      <img src="figures/mininet_import_appliance_1.png" width="419" height="390.5"/><br>
+    </td>
+    <td>
+      <img src="figures/mininet_import_appliance_2.png" width="551.5" height="431.5"/><br>
+    </td>
+  </tr>
+</table>
+<figcaption><strong>Figure 3: </strong> Mininet Installation in VirtualBox </figcaption>
+</figure>
  B. To be able to login to the Mininet VM from your local machine using **ssh**, enable **Bridged Adapter**.
  While there are other ways to connect to the VM, Bridged Adapter is a great method to connect the VM directly to the physical network via the host’s network card, such as Ethernet and Wi-Fi. In this way, the Mininet VM appears as a separate device on the local area network (LAN), with its own IP address.
  To do that, go to Settings --> Network --> Adapter 1 --> Enable Network Adapter --> Attached to --> **Bridged Adapter**. 
