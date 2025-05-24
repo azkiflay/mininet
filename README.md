@@ -74,7 +74,7 @@ To do that, all that is required is to identify the IP address of the Mininet VM
 
 You can use the following command to find out IP address of the Mininet VM.
 ```bash
-  ifconfig eth1 # See and note the IP address for eth1.
+  ifconfig # See and note the IP address that is not a loopback address.
   ```
 Note the IP address obtained from **ifconfig** because it will be used for remote login to your Mininet VM. The computer where this tutorial was created had an IP address of **192.168.0.9**. Therefore, the same IP will be used for connecting to the Mininet VM. 
 Finally, you can use **ssh** to remotely access the Mininet VM from your loacl machine.
