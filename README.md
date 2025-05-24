@@ -35,8 +35,7 @@ Assuming the VirtualBox software is saved to **Downloads** directory in Ubuntu, 
 If you prefer any of the earlier Mininet realeases for any reason, you can download it from [Older Mininet VM image for Ubuntu](https://github.com/mininet/mininet/releases/).
 
 3. Install Mininet in VirtualBox and setup remote access to Mininet according to the following steps.
- A. Import Mininet to VirtualBox (File --> Import Appliance). These steps are shown in **Figures 3**. 
-
+ A. Import Mininet to VirtualBox (File --> Import Appliance) as shown in **Figures 3**. 
 <figure>
 <table>
   <tr>
@@ -50,23 +49,24 @@ If you prefer any of the earlier Mininet realeases for any reason, you can downl
 </table>
 <figcaption><strong>Figure 3: </strong> Mininet Installation in VirtualBox </figcaption>
 </figure>
- B. To be able to login to the Mininet VM from your local machine using **ssh**, enable **Bridged Adapter**.
- While there are other ways to connect to the VM, Bridged Adapter is a great method to connect the VM directly to the physical network via the host’s network card, such as Ethernet and Wi-Fi. In this way, the Mininet VM appears as a separate device on the local area network (LAN), with its own IP address.
- To do that, go to Settings --> Network --> Adapter 1 --> Enable Network Adapter --> Attached to --> **Bridged Adapter**. 
- C. To start the Mininet VM in VirtualBox, select it and click **Start**.
+ B. On VirtualBox, configure the Mininet VM so that you can login to it from your local machine using **ssh**.
+ While there are other ways to connect to the VM, Bridged Adapter is enables the Mininet VM to directly connect to the physical network via the host’s network card, such as Ethernet and Wi-Fi. In this way, the Mininet VM appears as a separate device on the local area network (LAN), with its own IP address.
+ To configure a Bridged Adapter in VirtualBox, go to Settings --> Network --> Adapter 1 --> Enable Network Adapter --> Attached to --> **Bridged Adapter**.
+ C. Select the Mininet VM in VirtualBox, and click **Start**.
  D. Log in to Mininet using the default log in details, i.e. **username: mininet**, **password: mininet**.
 
-4. Enable remote access from you local machine to the Mininet VM
- A. On VirtualBox --> Tools --> Host-only Networks --> Create --> (vboxnet0) and Enable DHCP Server
-On Mininet VM, set up an interface (**eth1**) for remote access.
+4. After logging in to Mininet, configure it for remote access.
+ On the Mininet VM terminal, set up an interface (**eth1**) as follows.
   ```bash
   sudo dhclient eth1 # Run DHCP for eth1 interface
   ifconfig eth1 # See and note the IP address for eth1.
   ```
-5. On your loacl machine, you can use **ssh** to remotely access the Mininet VM.
+  Note the IP address obtained from **ifconfig** because it will be used for remote login to your Mininet VM. On my local machine where I am writing this tutorial, the IP address is **192.168.0.8**.
+5. On your loacl machine, use **ssh** to remotely access the Mininet VM.
   ```bash
   ssh -X mininet@192.168.0.8
   ```
+These basic configurations will enable you to access you Mininet VM from any computer on your local network. First, ensure the Mininet VM has been started. Second, you can login to Mininet using **ssh -X mininet@192.168.0.8** by replacing the IP address with the IP address assigned to your local Mininet VM.
 
 -- Mininet Walkthrough: https://mininet.org/walkthrough/
 Software Defined Networking 
