@@ -17,12 +17,48 @@ Notably, the control plane is distributed across the network in traditional netw
 In other words, all the control functionality in traditional switches has been moved to the SDN Controller. Notably, the data plane part is retained by individual switches in the network architecture. As a results, the switches in an SDN based network focus on data forwarding according to the instructions they receive from the SDN Controller.
 
 
-## 
-
-
 # Mininet
--- Get Mininet: https://mininet.org/download/
-Mininet is available for common operating systems (OSes), including Linux, macOS and Windows. There are multiple ways to install Mininet in each of the OSes. Among these, the most foolproof method is to install a pre-packaged Mininet Virual Machine (VM) image in a virtualization systems such as [VirtualBox](https://www.virtualbox.org/) and [VMWare](https://www.vmware.com/).
+Mininet is a network emulator software. It is used to create an SDN network using virtual hosts, switches, and SDN controller(s). Due to its ease of use and software-based implementation, Mininet is great for experimenting with SDN, OpenFlow, SDN controllers, and SDN applications. While there are also other SDN emulation software, Mininet is one of the most widely ones.
+## Setting Up Mininet
+Mininet is available for common operating systems (OSes), including Linux, macOS and Windows. There are multiple ways to install Mininet in each of the OSes. Among these, the most foolproof method is to install a pre-packaged Mininet Virual Machine (VM) image in a virtualization systems such as [VirtualBox](https://www.virtualbox.org/) and [VMWare](https://www.vmware.com/). This is a Mininet tutorial for an Ubuntu Linux-based environment on VirtualBox. The steps can be adopted to other Linux distributions with minimum customization.
+1. Install VirtualBox by downloading it from https://www.virtualbox.org/wiki/Linux_Downloads
+Assuming the VirtualBox software is saved to **Downloads** directory in Ubuntu, use the following commands to install it.
+  ```bash
+  cd Downloads/ # Navigate to Downloads directory
+  sudo dpkg -i virtualbox-7.1_7.1.8-168469~Ubuntu~noble_amd64.deb # Install VirtualBox VM
+  sudo apt install virtualbox-dkms
+  sudo apt install virtualbox-guest-additions-iso
+  sudo apt install virtualbox-guest-utils-hwe
+  ```
+
+2. Download [Mininet VM image for Ubuntu 20.04.1](https://github.com/mininet/mininet/releases/download/2.3.0/mininet-2.3.0-210211-ubuntu-20.04.1-legacy-server-amd64-ovf.zip), which is the recommended one by the maintainers.
+If you prefer any of the earlier Mininet realeases for any reason, you can download it from [Older Mininet VM image for Ubuntu](https://github.com/mininet/mininet/releases/).
+
+3. Install Mininet in VirtualBox and setup remote access to Mininet according to the following steps.
+ A. Import Mininet to VirtualBox (File --> Import Appliance)
+ B. To be able to login to the Mininet VM from your local machine using **ssh**, enable **Bridged Adapter**.
+ While there are other ways to connect to the VM, Bridged Adapter is a great method to connect the VM directly to the physical network via the host’s network card, such as Ethernet and Wi-Fi. In this way, the Mininet VM appears as a separate device on the local area network (LAN), with its own IP address.
+ To do that, go to Settings --> Network --> Adapter 1 --> Enable Network Adapter --> Attached to --> **Bridged Adapter**. 
+ C. To start the Mininet VM in VirtualBox, select it and click **Start**.
+ D. Log in to Mininet using the default log in details, i.e. **username: mininet**, **password: mininet**.
+
+4. Enable remote access from you local machine to the Mininet VM
+ A. On VirtualBox --> Tools --> Host-only Networks --> Create --> (vboxnet0) and Enable DHCP Server
+On Mininet VM, set up an interface (**eth1**) for remote access.
+  ```bash
+  sudo apt update
+  sudo apt install openssh-server
+  sudo systemctl start ssh
+  sudo systemctl enable ssh
+  ifconfig # Check the name of a network interface and its IP address
+  sudo dhclient eth1 # Run DHCP for eth1 interface
+  ifconfig eth1 # See and note the IP address for eth1.
+  ```
+5. On your loacl machine, you can use **ssh** to remotely access the Mininet VM.
+  ```bash
+  ssh -X mininet@
+  ```
+
 -- Mininet Walkthrough: https://mininet.org/walkthrough/
 Software Defined Networking 
 
@@ -123,3 +159,5 @@ If you would like to refer the paper in your research, please use the following 
   publisher={Elsevier}
 ```
 
+# References
+1. https://mininet.org/download/
