@@ -1,4 +1,4 @@
-# Software Defined Networking
+# 1. Software Defined Networking
 Switches and routers play a critical role in enterprise networks. Traditionally, these network devices have been responsible for deciding which path packets should follow, as well the actual data trasnfer (forwarding). In other words, the control and data flow functionalities of the network devices have been dealt with at each swithch and router, individually. While *control* refers to determining step-by-step movement of a given packet from source to destination, *forwarding* means the flow of data packets from the source to the destination. In tradtional computer networks, switches and routers are responsible for both the control and data forwarding functions. As shown in **Figure 1**, control and data planes in traditional switches are distributed across the network.
 
 <p align="center">
@@ -17,9 +17,9 @@ Notably, the control plane is distributed across the network in traditional netw
 In other words, all the control functionality in traditional switches has been moved to the SDN Controller. Notably, the data plane part is retained by individual switches in the network architecture. As a results, the switches in an SDN based network focus on data forwarding according to the instructions they receive from the SDN Controller.
 
 
-# Mininet
+# 2. Mininet
 Mininet is a network emulator software. It is used to create an SDN network using virtual hosts, switches, and SDN controller(s). Due to its ease of use and software-based implementation, Mininet is great for experimenting with SDN, OpenFlow, SDN controllers, and SDN applications. While there are also other SDN emulation software, Mininet is one of the most widely ones.
-## Setting Up Mininet
+## 2.1. Setting Up Mininet
 Mininet is available for common operating systems (OSes), including Linux, macOS and Windows. There are multiple ways to install Mininet in each of the OSes. Among these, the most foolproof method is to install a pre-packaged Mininet Virual Machine (VM) image in a virtualization systems such as [VirtualBox](https://www.virtualbox.org/) and [VMWare](https://www.vmware.com/). This is a Mininet tutorial for an Ubuntu Linux-based environment on VirtualBox. The steps can be adopted to other Linux distributions with minimum customization.
 1. Install VirtualBox by downloading it from https://www.virtualbox.org/wiki/Linux_Downloads
 Assuming the VirtualBox software is saved to **Downloads** directory in Ubuntu, use the following commands to install it.
@@ -30,6 +30,24 @@ Assuming the VirtualBox software is saved to **Downloads** directory in Ubuntu, 
   sudo apt install virtualbox-guest-additions-iso
   sudo apt install virtualbox-guest-utils-hwe
   ```
+These steps are shown in **Figures 3 - 6**. 
+
+<figure>
+<table>
+  <tr>
+    <td>
+      <img src="figures/mininet_import_appliance_1.png" width="317.5" height="180"/><br>
+      <strong>(a)</strong> Input Image
+    </td>
+    <td>
+      <img src="figures/mininet_import_appliance_2.png" width="317.5" height="180"/><br>
+      <strong>(b)</strong> Processed Output
+    </td>
+  </tr>
+</table>
+<figcaption><strong>Figure 3: </strong> Mininet Installation in VirtualBox </figcaption>
+</figure>
+
 
 2. Download [Mininet VM image for Ubuntu 20.04.1](https://github.com/mininet/mininet/releases/download/2.3.0/mininet-2.3.0-210211-ubuntu-20.04.1-legacy-server-amd64-ovf.zip), which is the recommended one by the maintainers.
 If you prefer any of the earlier Mininet realeases for any reason, you can download it from [Older Mininet VM image for Ubuntu](https://github.com/mininet/mininet/releases/).
@@ -46,11 +64,6 @@ If you prefer any of the earlier Mininet realeases for any reason, you can downl
  A. On VirtualBox --> Tools --> Host-only Networks --> Create --> (vboxnet0) and Enable DHCP Server
 On Mininet VM, set up an interface (**eth1**) for remote access.
   ```bash
-  sudo apt update
-  sudo apt install openssh-server
-  sudo systemctl start ssh
-  sudo systemctl enable ssh
-  ifconfig # Check the name of a network interface and its IP address
   sudo dhclient eth1 # Run DHCP for eth1 interface
   ifconfig eth1 # See and note the IP address for eth1.
   ```
