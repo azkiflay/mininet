@@ -56,7 +56,7 @@ On Mininet VM, set up an interface (**eth1**) for remote access.
   ```
 5. On your loacl machine, you can use **ssh** to remotely access the Mininet VM.
   ```bash
-  ssh -X mininet@
+  ssh -X mininet@192.168.0.8
   ```
 
 -- Mininet Walkthrough: https://mininet.org/walkthrough/
