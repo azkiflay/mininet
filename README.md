@@ -62,6 +62,7 @@ If you prefer any of the earlier Mininet realeases for any reason, you can downl
   ifconfig eth1 # See and note the IP address for eth1.
   ```
   Note the IP address obtained from **ifconfig** because it will be used for remote login to your Mininet VM. The computer where this tutorial is been created has an IP address of **192.168.0.8**. Therefore, that IP will be used for connecting to Mininet using ssh.
+
 5. On your loacl machine, use **ssh** to remotely access the Mininet VM.
   ```bash
   ssh -X mininet@192.168.0.8
