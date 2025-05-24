@@ -41,10 +41,10 @@ If you prefer any of the earlier Mininet realeases for any reason, you can downl
 <table>
   <tr>
     <td>
-      <img src="figures/mininet_import_appliance_1.png" width="419" height="390.5"/><br>
+      <img src="figures/mininet_import_appliance_1.png" width="390.5" height="419"/><br>
     </td>
     <td>
-      <img src="figures/mininet_import_appliance_2.png" width="551.5" height="431.5"/><br>
+      <img src="figures/mininet_import_appliance_2.png" width="431.5" height="551.5"/><br>
     </td>
   </tr>
 </table>
