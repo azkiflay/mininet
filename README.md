@@ -88,7 +88,7 @@ Figure 5 shows an SSH based remote login to the Mininet VM. After typing 'yes' t
 </p>
 <p align="center"><strong>Figure 5:</strong> Mininet Remote Login</p>
 
-These basic configurations will enable you to access you Mininet VM from any computer on your local network. First, ensure the Mininet VM has been started. Second, you can login to Mininet using **ssh -X mininet@192.168.0.9** by replacing the IP address with the IP address assigned to your local Mininet VM.
+These basic configurations will enable you to access your Mininet VM from any computer on your local network. First, ensure the Mininet VM has been started. Second, you can login to Mininet using **ssh -X mininet@192.168.0.9** by replacing the IP address with the IP address assigned to your local Mininet VM.
 
 ## 2.2. Basic SDN Network on Mininet
 
@@ -103,4 +103,4 @@ These basic configurations will enable you to access you Mininet VM from any com
 # References
 1. https://mininet.org/download/
 
-2. Mininet Walkthrough: https://mininet.org/walkthrough/
+2. https://mininet.org/walkthrough/
