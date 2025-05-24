@@ -30,18 +30,16 @@ Assuming the VirtualBox software is saved to **Downloads** directory in Ubuntu, 
   sudo apt install virtualbox-guest-additions-iso
   sudo apt install virtualbox-guest-utils-hwe
   ```
-These steps are shown in **Figures 3 - 6**. 
+These steps are shown in **Figures 3**. 
 
 <figure>
 <table>
   <tr>
     <td>
       <img src="figures/mininet_import_appliance_1.png" width="317.5" height="180"/><br>
-      <strong>(a)</strong> Input Image
     </td>
     <td>
       <img src="figures/mininet_import_appliance_2.png" width="317.5" height="180"/><br>
-      <strong>(b)</strong> Processed Output
     </td>
   </tr>
 </table>
