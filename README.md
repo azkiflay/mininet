@@ -132,6 +132,10 @@ By default, Mininet comes with a minimal SDN network topology. It includes an Op
 </p>
 <p align="center"><strong>Figure 6:</strong> Mininet Basic Network</p>
 
+As shown in Figure 6, the names of the SDN Switch, Host 1, Host 2, and the SDN controller are indeed **s1**, **h1**, **h2**, and **c0**. You can check if that is the case using the following command.
+  ```bash
+  nodes
+  ```
 
 **Note:**
 <!--
