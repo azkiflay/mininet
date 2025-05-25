@@ -3,7 +3,7 @@ Switches and routers play a critical role in enterprise networks. Traditionally,
 
 While *control* refers to determining step-by-step movement of a given packet from source to destination, *forwarding* means the flow of data packets from the source to the destination. In tradtional computer networks, switches and routers are responsible for both the control and data forwarding functions. 
 
-As shown in **Figure 1**, control and data planes in traditional switches are distributed across the network.
+As shown in Figure 1, control and data planes in traditional switches are distributed across the network.
 <p align="center">
   <img src="figures/traditional_switch.png" width="247" height="140"/>
 </p>
@@ -12,7 +12,7 @@ As shown in **Figure 1**, control and data planes in traditional switches are di
 
 Notably, the control plane is distributed across the network in traditional network architecture. However, the merger of control and data forwarding planes has been found to be inefficient. Therefore, to address the limitations of network architectures based on traditional switches, Software Defined Networking (SDN) was proposed nearly two decades ago. SDN moves the control plane out of individual switches to create a centralized network control architecture. 
 
-**Figure 2** shows the separation of control and data planes in SDN based architecture. Centralized control is handled by an **SDN Controller**, which is responsible for deciding which particular paths packets take in the network. Based on routing decisions made by the SDN controller, the actual data forwarding is made by individual switches by the data plane in each.
+Figure 2 shows the separation of control and data planes in SDN based architecture. Centralized control is handled by an **SDN Controller**, which is responsible for deciding which particular paths packets take in the network. Based on routing decisions made by the SDN controller, the actual data forwarding is made by individual switches by the data plane in each.
 
 <p align="center">
   <img src="figures/sdn_switch.png" width="317.5" height="180"/>
@@ -40,7 +40,7 @@ If you prefer any of the earlier Mininet realeases for any reason, you can downl
 
 3. Install Mininet in VirtualBox and setup remote access to Mininet according to the following steps.
  
- A. Import Mininet to VirtualBox (File --> Import Appliance) as shown in **Figures 3**. 
+ A. Import Mininet to VirtualBox (File --> Import Appliance) as shown in Figures 3. 
 <figure>
 <table>
   <tr>
@@ -62,7 +62,7 @@ If you prefer any of the earlier Mininet realeases for any reason, you can downl
 
  C. Select the Mininet VM in VirtualBox, and click **Start**.
 
- D. Log in to Mininet using the default log in details, using **username: mininet**, **password: mininet**. **Figure 4** shows a login screen when done on the Mininet VM directly. However, it is usually more convenient to be able to login to Mininet VM remotely. That is where remote access using **ssh** comes in.
+ D. Log in to Mininet using the default log in details, using **username: mininet**, **password: mininet**. Figure 4 shows a login screen when done on the Mininet VM directly. However, it is usually more convenient to be able to login to Mininet VM remotely. That is where remote access using **ssh** comes in.
 <p align="center">
   <img src="figures/mininet_login.png"/>
 </p>
