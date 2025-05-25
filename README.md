@@ -66,7 +66,7 @@ If you prefer any of the earlier Mininet realeases for any reason, you can downl
  
  Figure 4 shows a login screen when done on the Mininet VM directly. However, it is usually more convenient to be able to login to Mininet VM remotely. That is where remote access using **ssh** comes in.
 <p align="center">
-  <img src="figures/mininet_login.png"/>
+  <img src="figures/mininet_login.png" width="547.5" height="101"/>
 </p>
 <p align="center"><strong>Figure 4:</strong> Mininet Local Login</p>
 
@@ -86,7 +86,7 @@ Finally, you can use **ssh** to remotely access the Mininet VM from your loacl m
 
 Figure 5 shows an SSH based remote login to the Mininet VM. After typing 'yes' to confirm the connection, you will be prompted to enter the password for Mininet, which is **mininet**. If you get a screen output similar to Figure 5, the remote login to Mininet VM has been successful.
 <p align="center">
-  <img src="figures/Mininet_ssh_login.png"/>
+  <img src="figures/Mininet_ssh_login.png" width="439" height="218.5"/>
 </p>
 <p align="center"><strong>Figure 5:</strong> Mininet Remote Login</p>
 
