@@ -92,7 +92,7 @@ Figure 5 shows an SSH based remote login to the Mininet VM. After typing 'yes' t
 
 These basic configurations will enable you to access your Mininet VM from any computer on your local network. First, ensure the Mininet VM has been started. Second, you can login to Mininet using **ssh -X mininet@192.168.0.9** by replacing the IP address with the IP address assigned to your local Mininet VM.
 
-## 2.2. Basic SDN Network on Mininet
+## 2.2. Displaying Mininet's Options
 
 Mininet is started using **mn** command on the terminal as a root user. For example, the following command displays Mininet's help message and startup options.
   ```bash
@@ -113,6 +113,25 @@ Figure 6 shows output of the **sudo mn -h** command.
 </table>
 <figcaption><strong>Figure 6: </strong> Output of the "sudo mn -h" command </figcaption>
 </figure>
+
+## 2.3. Using Wireshark to Display SDN Traffic
+  ```bash
+  sudo HOME=~ wireshark &
+  ```
+
+Alternatively, the following commnad can be used.
+  ```bash
+  sudo -E wireshark &
+  ```
+
+## 2.3. Basic SDN Network
+
+By default, Mininet comes with a minimal SDN network topology. It includes an OpenFlow switch, two hosts connected to the switch, and an OpenFlow SDN controller. Figure 7 shows the default SDN network in Mininet.
+<p align="center">
+  <img src="figures/sdn_default_topology.png"/>
+</p>
+<p align="center"><strong>Figure 6:</strong> Mininet Basic Network</p>
+
 
 **Note:**
 <!--
