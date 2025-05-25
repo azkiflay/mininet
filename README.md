@@ -111,7 +111,7 @@ Figure 6 shows output of the **sudo mn -h** command.
     </td>
   </tr>
 </table>
-<figcaption><strong>Figure 6: </strong> Mininet Installation in VirtualBox </figcaption>
+<figcaption><strong>Figure 6: </strong> Output of the "sudo mn -h" command </figcaption>
 </figure>
 
 **Note:**
