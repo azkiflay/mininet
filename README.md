@@ -62,7 +62,9 @@ If you prefer any of the earlier Mininet realeases for any reason, you can downl
 
  C. Select the Mininet VM in VirtualBox, and click **Start**.
 
- D. Log in to Mininet using the default log in details, using **username: mininet**, **password: mininet**. Figure 4 shows a login screen when done on the Mininet VM directly. However, it is usually more convenient to be able to login to Mininet VM remotely. That is where remote access using **ssh** comes in.
+ D. Log in to Mininet using the default log in details, using **username: mininet**, **password: mininet**. 
+ 
+ Figure 4 shows a login screen when done on the Mininet VM directly. However, it is usually more convenient to be able to login to Mininet VM remotely. That is where remote access using **ssh** comes in.
 <p align="center">
   <img src="figures/mininet_login.png"/>
 </p>
