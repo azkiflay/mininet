@@ -94,6 +94,26 @@ These basic configurations will enable you to access your Mininet VM from any co
 
 ## 2.2. Basic SDN Network on Mininet
 
+Mininet is started using **mn** command on the terminal as a root user. For example, the following command displays Mininet's help message and startup options.
+  ```bash
+  sudo mn -h # shows Mininet’s startup options
+  ```
+
+Figure 6 shows output of the **sudo mn -h** command.
+<figure>
+<table>
+  <tr>
+    <td>
+      <img src="figures/mininet_help_1.png"/><br>
+    </td>
+    <td>
+      <img src="figures/mininet_help_2.png"/><br>
+    </td>
+  </tr>
+</table>
+<figcaption><strong>Figure 6: </strong> Mininet Installation in VirtualBox </figcaption>
+</figure>
+
 **Note:**
 <!--
 + At the time of writing this document, ...
