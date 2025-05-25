@@ -128,7 +128,7 @@ Alternatively, the following commnad can be used.
 
 By default, Mininet comes with a minimal SDN network topology. It includes an OpenFlow switch, two hosts connected to the switch, and an OpenFlow SDN controller. Figure 7 shows the default SDN network in Mininet.
 <p align="center">
-  <img src="figures/sdn_default_topology.png" width="366" height="338"/>
+  <img src="figures/sdn_default_topology.png" width="183" height="169"/>
 </p>
 <p align="center"><strong>Figure 6:</strong> Mininet Basic Network</p>
 
