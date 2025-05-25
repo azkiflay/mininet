@@ -152,11 +152,14 @@ If you type **help** on the Mininet terminal, you can see what commands are avai
 + What outputs did you get for each command?
 + Can you explain the meaning of each command's output?
 
+<!--In addition to the **help** command, there is another way to get more information about Mininet commands. That is to use the Linux way of accessing the manual page by typing **man** followed by the command you want more information on. For example, the following command provides details about what **pingall** means in Mininet, as well as how it can be used with different command options.
+-->
+
 To test the connectivity between nodes, you can use **ping** in a similar way to how connectivity is tested in a traditional network. For example, to check if **h1** can reach **h2**, the following command can be used.
-```bash
-  h1 ping -c 4 h2
+  ```bash
+  h1 ping -c4 h2
   ```
-Note that the option **-c 4** limits the number of connectivity testing packets to **4**. Otherwise, if you issue **h1 ping h2** instead, the test would continue nonstop until manually interrupted (with a **Ctrl C**) or the Mininet VM is stopped.
+Note that the option **-c4** limits the number of connectivity testing packets to **4** (i.e. **-c4** indicating count of 4). Otherwise, if you issue **h1 ping h2** instead, the test would continue nonstop until manually interrupted (with a **Ctrl C**) or the Mininet VM is stopped.
 
 
 # References
