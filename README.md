@@ -138,11 +138,19 @@ As shown in Figure 6, the names of the SDN Switch, Host 1, Host 2, and the SDN c
 </p>
 <p align="center"><strong>Figure 6:</strong> Nodes of Mininet's Default Network</p>
 
-**Note:**
-<!--
-+ At the time of writing this document, ...
--->
-+ The PCAP files of the dataset are nearly 100 Gigabyte. So, it is important to make sure enough disk storage is avaialbe for the PCAP and CSV files of the UNSW-NB15 dataset as well as free disk space to install the required packages for the project.
+If you type **help** on the Mininet terminal, you can see what commands are available. This is handy when you want a reminder about the available options.
+
+**Practice:**
++ From the list obtained by issuing the command **help**, run the following commands on your Mininet terminal.
+```bash
+  nodes
+  links
+  net
+  ports
+  pingall
+  ```
++ What outputs did you get for each command?
++ Can you explain the meaning of each command's output?
 
 
 
