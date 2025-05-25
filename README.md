@@ -152,7 +152,7 @@ If you type **help** on the Mininet terminal, you can see what commands are avai
 + What outputs did you get for each command?
 + Can you explain the meaning of each command's output?
 
-To test the connectivity between nodes, you can use **ping** in a similar way to how connectivity is tested in a traditional network. For example, to check if **h1** is reachable from **h2**, the following command can be used.
+To test the connectivity between nodes, you can use **ping** in a similar way to how connectivity is tested in a traditional network. For example, to check if **h1** can reach **h2**, the following command can be used.
 ```bash
   h1 ping -c 4 h2
   ```
