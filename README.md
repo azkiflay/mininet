@@ -1,16 +1,16 @@
-# 0. Overview
+# 1. Overview
 In this tutorial, we will explore Software Defined Networking (SDN) using a **Mininet** network emulator. Practical-oriented learning is one of the best ways of learning. Therefore, this tutorial follows a hands-on approach.
 
 The tutorial contains the following: <br>
-1. Introduction to SDN <br>
-2. Installing Mininet <br>
-3. Mininet Basic Usage <br>
-4. Creating Your Own Network on Mininet <br>
-  4.1. On Mininet's Terminal <br>
-  4.2. Using Python Scripts <br>
-5. References <br>
+2. Introduction to SDN <br>
+3. Installing Mininet <br>
+4. Mininet Basic Usage <br>
+5. Creating Your Own Network on Mininet <br>
+  5.1. On Mininet's Terminal <br>
+  5.2. Using Python Scripts <br>
+6. References <br>
 
-# 1. Introduction to SDN
+# 2. Introduction to SDN
 Switches and routers play a critical role in enterprise networks. Traditionally, these network devices have been responsible for deciding which path packets should follow, as well the actual data trasnfer (forwarding). In other words, the control and data flow functionalities of the network devices have been dealt with at each swithch and router, individually. 
 
 While *control* refers to determining step-by-step movement of a given packet from source to destination, *forwarding* means the flow of data packets from the source to the destination. In tradtional computer networks, switches and routers are responsible for both the control and data forwarding functions. 
@@ -34,7 +34,7 @@ Figure 2 shows the separation of control and data planes in SDN based architectu
 In other words, all the control functionality in traditional switches has been moved to the SDN Controller. Notably, the data plane part is retained by individual switches in the network architecture. As a results, the switches in an SDN based network focus on data forwarding according to the instructions they receive from the SDN Controller.
 
 
-# 2. Installing Mininet
+# 3. Installing Mininet
 Mininet is a network emulator software. It is used to create an SDN network using virtual hosts, switches, and SDN controller(s). Due to its ease of use and software-based implementation, Mininet is great for experimenting with SDN, OpenFlow, SDN controllers, and SDN applications. While there are also other SDN emulation software, Mininet is one of the most widely ones.
 
 Mininet is available for common operating systems (OSes), including Linux, macOS and Windows. There are multiple ways to install Mininet in each of the OSes. Among these, the most foolproof method is to install a pre-packaged Mininet Virual Machine (VM) image in a virtualization systems such as [VirtualBox](https://www.virtualbox.org/) and [VMWare](https://www.vmware.com/). This is a Mininet tutorial for an Ubuntu Linux-based environment on VirtualBox. The steps can be adopted to other Linux distributions with minimum customization.
@@ -103,7 +103,7 @@ Figure 5 shows an SSH based remote login to the Mininet VM. After typing 'yes' t
 
 These basic configurations will enable you to access your Mininet VM from any computer on your local network. First, ensure the Mininet VM has been started. Second, you can login to Mininet using **ssh -X mininet@192.168.0.9** by replacing the IP address with the IP address assigned to your local Mininet VM.
 
-# 3. Mininet Basic Usage
+# 4. Mininet Basic Usage
 
 Mininet is started using **mn** command on the terminal as a root user. For example, the following command displays Mininet's help message and startup options.
   ```bash
@@ -169,9 +169,9 @@ To test the connectivity between nodes, you can use **ping** in a similar way to
   ```
 Note that the option **-c4** limits the number of connectivity testing packets to **4** (i.e. **-c4** indicating count of 4). Otherwise, if you issue **h1 ping h2** instead, the test would continue nonstop until manually interrupted (with a **Ctrl C**) or the Mininet VM is stopped.
 
-# 4. Creating Your Own Network on Mininet
+# 5. Creating Your Own Network on Mininet
   
-  ## 4.1. On Mininet's Terminal
+  ## 5.1. On Mininet's Terminal
   ```bash
   sudo mn --topo=single,4
   ```
@@ -184,7 +184,7 @@ Note that the option **-c4** limits the number of connectivity testing packets t
   sudo mn --topo=tree,2,2
   ```
 
-  ## 4.1. Using Python Scripts
+  ## 5.1. Using Python Scripts
 
   ```bash
   #!/usr/bin/python
@@ -233,7 +233,6 @@ Note that the option **-c4** limits the number of connectivity testing packets t
   ```
 
 
-# References
-1. https://mininet.org/download/
-
-2. https://mininet.org/walkthrough/
+# 6. References
+1. https://mininet.org/ <br>
+2. 
