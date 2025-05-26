@@ -6,8 +6,6 @@ The tutorial contains the following: <br>
 3. Installing Mininet <br>
 4. Mininet Basic Usage <br>
 5. Creating Your Own Network on Mininet <br>
-  5.1. On Mininet's Terminal <br>
-  5.2. Using Python Scripts <br>
 6. References <br>
 
 # 2. Introduction to SDN
