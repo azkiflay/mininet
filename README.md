@@ -1,5 +1,5 @@
 # 1. Overview
-In this tutorial, we will explore Software Defined Networking (SDN) using a **Mininet** network emulator. Practical-oriented learning is one of the best ways of learning. Therefore, this tutorial follows a hands-on approach.
+In this tutorial, we will explore Software Defined Networking (SDN) using **Mininet**, which is widely used SDN network emulator. This is a practical-oriented tutorial, helping the reader understand SDN using hands-on examples.
 
 The tutorial contains the following: <br>
 2. Introduction to SDN <br>
