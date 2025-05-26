@@ -196,11 +196,18 @@ Note that the option **-c4** limits the number of connectivity testing packets t
   <p align="center">
   <img src="figures/mininet_topo_tree_2_2_hosts.png" width="346" height="415"/>
   </p>
-  <p align="center"><strong>Figure 7:</strong> An SDN Topology With Four Switches and Four Hosts.</p>
+  <p align="center"><strong>Figure 9:</strong> An SDN Topology With Four Switches and Four Hosts.</p>
 
 
   ## 5.1. Using Python Scripts
+As shown above, it is possible to create network topologies using Mininet commands. However, such approach is limited in terms flexibility to create user-defined network topologies. To address, Mininet support Python script based method to create user defined network topologies. To illustrate, assume you want to create the netowrk shown in Figure 10.
 
+<p align="center">
+  <img src="figures/mininet_topo_tree_2_2_hosts.png" width="346" height="415"/>
+  </p>
+  <p align="center"><strong>Figure 10:</strong> An SDN Topology With Three Switches and Eight Hosts.</p>
+
+To create the SDN topology in Figure 10, you can use the following Python script.
   ```bash
   #!/usr/bin/python
   from mininet.topo import Topo
@@ -210,34 +217,42 @@ Note that the option **-c4** limits the number of connectivity testing packets t
 
   class MyTopo(Topo):
       def build(self):
-          # Add switch
+          # Create switches s1, s2, s3
           s1 = self.addSwitch('s1')
           s2 = self.addSwitch('s2')
           s3 = self.addSwitch('s3')
-          s4 = self.addSwitch('s4')
-          s5 = self.addSwitch('s5')
-
+  
           # Add hosts
           h1 = self.addHost('h1')
           h2 = self.addHost('h2')
           h3 = self.addHost('h3')
           h4 = self.addHost('h4')
+          h5 = self.addHost('h5')
+          h6 = self.addHost('h6')
+          h7 = self.addHost('h7')
+          h8 = self.addHost('h8')
 
-          # Add links
-          self.addLink(h1, s1)
-          self.addLink(h2, s2)
-          self.addLink(h3, s3)
-          self.addLink(h4, s4)
+          # Create links between (switch1 & s2, s3)
           self.addLink(s1, s2)
-          self.addLink(s3, s4)
-          self.addLink(s5, s3)
-          self.addLink(s5, s4)
+          self.addLink(s1, s3)
+
+          # Connet s2 & h1-h4
+          self.addLink(h1, s2)
+          self.addLink(h2, s2)
+          self.addLink(h3, s2)
+          self.addLink(h4, s2)
+          
+          # Connect s3 & h5-h8
+          self.addLink(h5, s3)
+          self.addLink(h6, s3)
+          self.addLink(h7, s3)
+          self.addLink(h8, s3)
 
   def run():
       topo = MyTopo()
       net = Mininet(topo)
       net.start()
-      print("Test network connectivity")
+      print("Testing network connectivity ... \n")
       net.pingAll()
       CLI(net)
       net.stop()
