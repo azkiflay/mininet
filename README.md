@@ -175,7 +175,7 @@ Note that the option **-c4** limits the number of connectivity testing packets t
   ```
   The above command on Mininet creates the network topology shown in Figure 7.
   <p align="center">
-  <img src="figures/mininet_topo_single_4_hosts.png" width="317.5" height="180"/>
+  <img src="figures/mininet_topo_single_4_hosts.png"/>
   </p>
   <p align="center"><strong>Figure 7:</strong> An SDN Topology With Single Switch and Four Hosts.</p>
 
@@ -185,7 +185,7 @@ Note that the option **-c4** limits the number of connectivity testing packets t
   sudo mn --topo=linear,4
   ```
   <p align="center">
-  <img src="figures/mininet_topo_linear_4_hosts.png" width="317.5" height="180"/>
+  <img src="figures/mininet_topo_linear_4_hosts.png"/>
   </p>
   <p align="center"><strong>Figure 8:</strong> An SDN Topology With Four Switches and Four Hosts.</p>
 
@@ -194,7 +194,7 @@ Note that the option **-c4** limits the number of connectivity testing packets t
   sudo mn --topo=tree,2,2
   ```
   <p align="center">
-  <img src="figures/mininet_topo_tree_2_2_hosts.png" width="317.5" height="180"/>
+  <img src="figures/mininet_topo_tree_2_2_hosts.png"/>
   </p>
   <p align="center"><strong>Figure 7:</strong> An SDN Topology With Four Switches and Four Hosts.</p>
 
