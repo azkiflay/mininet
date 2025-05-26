@@ -3,7 +3,13 @@ In this tutorial, we will explore Software Defined Networking (SDN) using a **Mi
 
 The tutorial contains the following: <br>
 1. Introduction to SDN <br>
-2. Mininet
+2. Installing Mininet <br>
+3. Mininet Basic Usage <br>
+4. Creating Your Own Network on Mininet <br>
+  4.1. On Mininet's Terminal <br>
+  4.2. Using Python Scripts <br>
+5. References <br>
+
 # 1. Introduction to SDN
 Switches and routers play a critical role in enterprise networks. Traditionally, these network devices have been responsible for deciding which path packets should follow, as well the actual data trasnfer (forwarding). In other words, the control and data flow functionalities of the network devices have been dealt with at each swithch and router, individually. 
 
@@ -97,7 +103,7 @@ Figure 5 shows an SSH based remote login to the Mininet VM. After typing 'yes' t
 
 These basic configurations will enable you to access your Mininet VM from any computer on your local network. First, ensure the Mininet VM has been started. Second, you can login to Mininet using **ssh -X mininet@192.168.0.9** by replacing the IP address with the IP address assigned to your local Mininet VM.
 
-# 3. Mininet Basics
+# 3. Mininet Basic Usage
 
 Mininet is started using **mn** command on the terminal as a root user. For example, the following command displays Mininet's help message and startup options.
   ```bash
