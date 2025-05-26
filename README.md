@@ -173,14 +173,31 @@ Note that the option **-c4** limits the number of connectivity testing packets t
   ```bash
   sudo mn --topo=single,4
   ```
+  The above command on Mininet creates the network topology shown in Figure 7.
+  <p align="center">
+  <img src="figures/mininet_topo_single_4_hosts.png" width="317.5" height="180"/>
+  </p>
+  <p align="center"><strong>Figure 7:</strong> An SDN Topology With Single Switch and Four Hosts.</p>
 
+  
+  Similarly, Figure 8 shows a network topology created by the following command on Mininet terminal.
   ```bash
   sudo mn --topo=linear,4
   ```
+  <p align="center">
+  <img src="figures/mininet_topo_linear_4_hosts.png" width="317.5" height="180"/>
+  </p>
+  <p align="center"><strong>Figure 8:</strong> An SDN Topology With Four Switches and Four Hosts.</p>
 
+  Moreover, the following command creates the tree topology shown in Figure 9.
   ```bash
   sudo mn --topo=tree,2,2
   ```
+  <p align="center">
+  <img src="figures/mininet_topo_tree_2_2_hosts.png" width="317.5" height="180"/>
+  </p>
+  <p align="center"><strong>Figure 7:</strong> An SDN Topology With Four Switches and Four Hosts.</p>
+
 
   ## 5.1. Using Python Scripts
 
