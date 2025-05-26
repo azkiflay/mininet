@@ -161,6 +161,21 @@ To test the connectivity between nodes, you can use **ping** in a similar way to
   ```
 Note that the option **-c4** limits the number of connectivity testing packets to **4** (i.e. **-c4** indicating count of 4). Otherwise, if you issue **h1 ping h2** instead, the test would continue nonstop until manually interrupted (with a **Ctrl C**) or the Mininet VM is stopped.
 
+## 2.4. Creating Network Topologies on Mininet Terminal
+  ```bash
+  sudo mn --topo=single,4
+  ```
+
+  ```bash
+  sudo mn --topo=linear,4
+  ```
+
+  ```bash
+  sudo mn --topo=tree,2,2
+  ```
+
+## 2.5. Creating Network Topologies Using Python Script
+
 
 # References
 1. https://mininet.org/download/
