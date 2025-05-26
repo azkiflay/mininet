@@ -203,7 +203,7 @@ Note that the option **-c4** limits the number of connectivity testing packets t
 As shown above, it is possible to create network topologies using Mininet commands. However, such approach is limited in terms flexibility to create user-defined network topologies. To address, Mininet support Python script based method to create user defined network topologies. To illustrate, assume you want to create the netowrk shown in Figure 10.
 
 <p align="center">
-  <img src="figures/mininet_topo_tree_2_2_hosts.png" width="346" height="415"/>
+  <img src="figures/sdn_topology.png" width="346" height="415"/>
   </p>
   <p align="center"><strong>Figure 10:</strong> An SDN Topology With Three Switches and Eight Hosts.</p>
 
