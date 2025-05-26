@@ -208,58 +208,67 @@ As shown above, it is possible to create network topologies using Mininet comman
   <p align="center"><strong>Figure 10:</strong> An SDN Topology With Three Switches and Eight Hosts.</p>
 
 To create the SDN topology in Figure 10, you can use the following Python script.
-  ```bash
-  #!/usr/bin/python
-  from mininet.topo import Topo
-  from mininet.net import Mininet
-  from mininet.cli import CLI
-  from mininet.log import setLogLevel
+```bash
+#!/usr/bin/python
+from mininet.topo import Topo
+from mininet.node import Controller
+from mininet.net import Mininet
+from mininet.cli import CLI
+from mininet.log import setLogLevel
 
-  class MyTopo(Topo):
-      def build(self):
-          # Create switches s1, s2, s3
-          s1 = self.addSwitch('s1')
-          s2 = self.addSwitch('s2')
-          s3 = self.addSwitch('s3')
-  
-          # Add hosts
-          h1 = self.addHost('h1')
-          h2 = self.addHost('h2')
-          h3 = self.addHost('h3')
-          h4 = self.addHost('h4')
-          h5 = self.addHost('h5')
-          h6 = self.addHost('h6')
-          h7 = self.addHost('h7')
-          h8 = self.addHost('h8')
+class MyTopo(Topo):
+    def build(self):
+        # Create switches s1, s2, s3
+        s1 = self.addSwitch('s1')
+        s2 = self.addSwitch('s2')
+        s3 = self.addSwitch('s3')
 
-          # Create links between (switch1 & s2, s3)
-          self.addLink(s1, s2)
-          self.addLink(s1, s3)
+        # Add hosts
+        h1 = self.addHost('h1')
+        h2 = self.addHost('h2')
+        h3 = self.addHost('h3')
+        h4 = self.addHost('h4')
+        h5 = self.addHost('h5')
+        h6 = self.addHost('h6')
+        h7 = self.addHost('h7')
+        h8 = self.addHost('h8')
 
-          # Connet s2 & h1-h4
-          self.addLink(h1, s2)
-          self.addLink(h2, s2)
-          self.addLink(h3, s2)
-          self.addLink(h4, s2)
-          
-          # Connect s3 & h5-h8
-          self.addLink(h5, s3)
-          self.addLink(h6, s3)
-          self.addLink(h7, s3)
-          self.addLink(h8, s3)
+        # Connet s1 & s2, s3
+        self.addLink(s1, s2)
+        self.addLink(s1, s3)
 
-  def run():
-      topo = MyTopo()
-      net = Mininet(topo)
-      net.start()
-      print("Testing network connectivity ... \n")
-      net.pingAll()
-      CLI(net)
-      net.stop()
+        # Connet s2 & h1-h4
+        self.addLink(h1, s2)
+        self.addLink(h2, s2)
+        self.addLink(h3, s2)
+        self.addLink(h4, s2)
+        
+        # Connect s3 & h5-h8
+        self.addLink(h5, s3)
+        self.addLink(h6, s3)
+        self.addLink(h7, s3)
+        self.addLink(h8, s3)
 
-  if __name__ == '__main__':
-      setLogLevel('info')
-      run()
+def run():
+    topo = MyTopo()
+    net = Mininet(topo=topo, controller=Controller)
+    net.start()
+    print("Testing network connectivity ... \n")
+    net.pingAll()
+    CLI(net)
+    net.stop()
+
+if __name__ == '__main__':
+    setLogLevel('info')
+    run()
+```
+
+After creating the Python script, the next step is to import the script to Mininet. Once it is in Mininet, you run the script to create the network topology shown in Figure 10. Firstly, copy the above Python script and save it as "topology.py". Secondly, use **scp** to copy it to Mininet as shown in the following command. Note that you need to modify the IP address to the that of the Mininet VM in your network environment.
+```bash
+  scp topology.py mininet@192.168.0.10:/home/mininet
+  ssh mininet@192.168.0.10
+  mininet-vm$ ls
+  mininet-vm$ sudo python3 topology.py
   ```
 
 
