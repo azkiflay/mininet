@@ -264,13 +264,19 @@ if __name__ == '__main__':
 ```
 
 After creating the Python script, the next step is to import the script to Mininet. Once it is in Mininet, you run the script to create the network topology shown in Figure 10. Firstly, copy the above Python script and save it as "topology.py". Secondly, use **scp** to copy it to Mininet as shown in the following command. Note that you need to modify the IP address to the that of the Mininet VM in your network environment.
-```bash
-  $ scp topology.py mininet@192.168.0.10:/home/mininet
-  $ ssh mininet@192.168.0.10
-  mininet-vm$ ls
-  mininet-vm$ sudo python3 topology.py
+
+  ```bash
+  scp topology.py mininet@192.168.0.10:/home/mininet
   ```
 
+  ```bash
+  ssh mininet@192.168.0.10
+  ```
+
+Finally, run the Python script to create the specified SDN topology, and test connectivity.
+  ```bash
+  sudo python3 topology.py
+  ```
 
 # 6. References
 1. Mininet Documentation, https://mininet.org, Accessed 23/05/2025 <br>
